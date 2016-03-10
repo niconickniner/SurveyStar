@@ -13,7 +13,7 @@ public class welComeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_wel_come);
     }
     public void goStart(View v) {
-        Intent it = new Intent(this,MainActivity.class);
+        Intent it = new Intent(this,firstActivity.class);
         startActivity(it);
     }
 }
