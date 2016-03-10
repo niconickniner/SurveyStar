@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SurveyStar</string>
+    <string name="title">A simple survey</string>
+    <string name="Surveytitle">What are you think of between stars and fans?</string>
 </resources>
