@@ -154,6 +154,7 @@
         android:layout_height="60dp"
         android:id="@+id/imageView3"
         android:src="@drawable/arrowright"
+        android:onClick="goNext"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 

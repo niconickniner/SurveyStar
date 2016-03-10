@@ -1,6 +1,8 @@
 package com.cqu.tangdwx.surveystar;
 
+import android.content.Intent;
 import android.net.Uri;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -109,14 +111,14 @@ public class firstActivity extends AppCompatActivity {
     }
     public void goNext(View v) {
         if(iflikestar == null) {
-            Toast.makeText(getApplicationContext(),"You havn't choose Q1!",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"You havn't choose Q1!",Toast.LENGTH_SHORT).show();
             ifValidInput = false;
         }
         else if(iflikestar == "Yes") {
             EditText sn = (EditText) findViewById(R.id.hidedEdit);
             starname = sn.getText().toString();
             if(starname.length() == 0) {
-                Toast.makeText(getApplicationContext(), "You havn't write star name!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "You havn't write star name!", Toast.LENGTH_SHORT).show();
                 ifValidInput = false;
             }
             else
@@ -127,7 +129,7 @@ public class firstActivity extends AppCompatActivity {
         }
 
         if(gender == null) {
-            Toast.makeText(getApplicationContext(), "You havn't choose gender!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "You havn't choose gender!", Toast.LENGTH_SHORT).show();
             ifValidInput = false;
         }
         else {
@@ -135,7 +137,7 @@ public class firstActivity extends AppCompatActivity {
         }
 
         if(age == null) {
-            Toast.makeText(getApplicationContext(), "You havn't choose ages!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "You havn't choose ages!", Toast.LENGTH_SHORT).show();
             ifValidInput = false;
         }
         else {
@@ -149,6 +151,9 @@ public class firstActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             //go to next activity
+            Toast.makeText(getApplicationContext(), "SUCCEED!", Toast.LENGTH_SHORT).show();
+            Intent it = new Intent(this,secondActivity.class);
+            startActivity(it);
         }
     }
 }
